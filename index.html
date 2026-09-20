@@ -1,0 +1,491 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Plante Café no Vale - Movimento de Transformação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e8e8e5",
+                        "secondary": "#77583d",
+                        "sapling-green": "#54B435",
+                        "surface-container-highest": "#e3e3e0",
+                        "surface-container": "#eeeeeb",
+                        "primary-fixed": "#c7ebd4",
+                        "surface-container-lowest": "#ffffff",
+                        "earth-clay": "#7C5C41",
+                        "surface-dim": "#dadad7",
+                        "forest-deep": "#1B3B2B",
+                        "background": "#faf9f6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#2d4d3c",
+                        "inverse-primary": "#abcfb8",
+                        "surface-bright": "#faf9f6",
+                        "on-surface": "#1a1c1a",
+                        "tertiary-fixed-dim": "#f0b9b9",
+                        "outline": "#727973",
+                        "coffee-cream": "#F9F7F2",
+                        "primary-container": "#1b3b2b",
+                        "secondary-fixed": "#ffdcc1",
+                        "secondary-container": "#fdd2b0",
+                        "primary": "#032517",
+                        "on-primary-fixed": "#002113",
+                        "on-background": "#1a1c1a",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#abcfb8",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5d4128",
+                        "tertiary": "#361618",
+                        "overcast-slate": "#4A5568",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f4f4f1",
+                        "tertiary-fixed": "#ffdad9",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c8c2",
+                        "surface-variant": "#e3e3e0",
+                        "secondary-fixed-dim": "#e8bf9e",
+                        "tertiary-container": "#4f2b2c",
+                        "on-tertiary-fixed-variant": "#633c3d",
+                        "inverse-surface": "#2f312f",
+                        "on-tertiary-container": "#c49192",
+                        "on-secondary-container": "#78593e",
+                        "surface": "#faf9f6",
+                        "inverse-on-surface": "#f1f1ee",
+                        "on-secondary-fixed": "#2c1603",
+                        "on-surface-variant": "#424843",
+                        "on-tertiary-fixed": "#311214",
+                        "surface-tint": "#456553",
+                        "on-primary-container": "#83a590"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Manrope"],
+                        "body-lg": ["\"Source Sans 3\""],
+                        "label-md": ["Manrope"],
+                        "headline-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-md": ["\"Source Sans 3\""],
+                        "display-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(27, 59, 43, 0.05) 1px, transparent 0);
+            background-size: 32px 32px;
+        }
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-surface-variant">
+<div class="max-w-[1280px] mx-auto px-6 md:px-8 h-20 flex items-center justify-between relative">
+<div class="flex items-center gap-2">
+<img alt="Logo" class="h-12 w-12 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtS1PESF4JFJjgEZa2JQyVZKjS7mtYmToBSftaHP30ed0d5GeltRhdEIZQmHv374KwZ65lV_KyqkqjRI0js480YQ0z3lc6QyFlQt_LGYhxDWvN1DS6nSrNsF5CiHwop11Ye8iBbJwsqUnx4VLPeRgXTHAbUSWlKeeDuThE-wYItUWJiz6Lt5MEZfMRCBZWLeRP424lAQJ9mBps3eAfKVZn_UD8tgAeo3kRDA6T_-UO8m-LyQd45pLPcuT_F">
+<span class="text-headline-md font-headline-md font-extrabold text-forest-deep">Plante Café no Vale</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2">
+<a class="text-forest-deep font-bold border-b-2 border-forest-deep transition-colors duration-300" href="#">Início</a>
+<a class="text-on-surface-variant font-label-md hover:text-earth-clay transition-colors duration-300" href="#">Sobre</a>
+<a class="text-on-surface-variant font-label-md hover:text-earth-clay transition-colors duration-300" href="#">O que fazemos</a>
+<a class="text-on-surface-variant font-label-md hover:text-earth-clay transition-colors duration-300" href="#">Contato</a>
+</nav>
+<a class="bg-forest-deep text-on-primary px-6 py-2.5 rounded-full font-label-md text-label-md hover:bg-earth-clay active:scale-95 transition-all duration-300 shadow-lg shadow-forest-deep/10" href="https://wa.me/551320150215">
+            Plante Café!
+        </a>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-forest-deep/80 via-forest-deep/40 to-transparent z-10"></div>
+<div class="w-full h-full bg-cover bg-center scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUh2JQ-TAu5zc4uBPNoqm_MvJ8QoOnNH304BR610MF3LuvfdfSavEj8vdGocSu6kDdrDvRa_LXwt0jwpuNpS9p9UJGtkCzLJ257kFo99skjrf9342iYBjbKc862SApKWS41088l4fEqoOLN1pE9aY6Dge8vvmbCBmwosRWe9aW4tqv_zT33xfHHCqFFuH78hyS4u9NIeqj12XEqPodyEHRH5ftzt-FulWvfeZNABl2AP2VxeqztFenSjXDR3It_Riea5cZY6f3P10J')"></div>
+</div>
+<div class="container mx-auto px-6 md:px-section-gap relative z-20">
+<div class="max-w-4xl">
+<span class="text-sapling-green font-label-md tracking-widest uppercase mb-4 block font-bold">Movimento de Transformação</span>
+<h1 class="text-display-lg font-display-lg text-white mb-8 leading-tight">
+                        Plante Café no Vale!<br>
+<span class="bg-sapling-green px-4 inline-block text-on-primary">O Vale é Café.</span>
+</h1>
+<p class="text-white/90 text-body-lg font-body-lg mb-12 max-w-2xl">
+                        Junte-se à revolução sustentável do café no Vale do Ribeira. Transformando vidas e solos através da excelência agrícola e compromisso regional.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-sapling-green text-on-primary px-12 py-5 rounded-full font-headline-md text-headline-md hover:bg-white hover:text-forest-deep transition-all duration-300 shadow-2xl shadow-sapling-green/30" href="#">
+                            Plante Café
+                        </a>
+<a class="border-2 border-white text-white px-12 py-5 rounded-full font-headline-md text-headline-md hover:bg-white/10 transition-all duration-300" href="#objetivo">
+                            Saiba Mais
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- History Section with Overlap -->
+<section class="py-section-gap bg-white relative transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="container mx-auto px-6 md:px-section-gap">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/3 order-2 md:order-1">
+<h2 class="text-headline-lg font-headline-lg text-forest-deep mb-6">Conheça nossa História</h2>
+<p class="text-body-lg text-on-surface-variant mb-8">Nossa trajetória é marcada pela paixão pela terra e pelo desejo de ver o Vale prosperar novamente.</p>
+<div class="w-24 h-1 bg-sapling-green"></div>
+</div>
+<div class="md:w-2/3 order-1 md:order-2 relative">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-earth-clay/10 rounded-full blur-3xl z-0"></div>
+<div class="relative z-10 aspect-video rounded-3xl overflow-hidden shadow-2xl group cursor-pointer -rotate-1 hover:rotate-0 transition-transform duration-500">
+<div class="absolute inset-0 bg-forest-deep/30 group-hover:bg-forest-deep/10 transition-colors z-20 flex items-center justify-center">
+<div class="w-24 h-24 bg-white/30 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/50 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-white text-6xl">play_arrow</span>
+</div>
+</div>
+<img alt="Video Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUh2JQ-TAu5zc4uBPNoqm_MvJ8QoOnNH304BR610MF3LuvfdfSavEj8vdGocSu6kDdrDvRa_LXwt0jwpuNpS9p9UJGtkCzLJ257kFo99skjrf9342iYBjbKc862SApKWS41088l4fEqoOLN1pE9aY6Dge8vvmbCBmwosRWe9aW4tqv_zT33xfHHCqFFuH78hyS4u9NIeqj12XEqPodyEHRH5ftzt-FulWvfeZNABl2AP2VxeqztFenSjXDR3It_Riea5cZY6f3P10J">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Nosso Objetivo Section - Asymmetric Widths -->
+<section class="py-section-gap bg-coffee-cream overflow-hidden transition-all duration-1000 ease-out opacity-100 translate-y-0" id="objetivo">
+<div class="container mx-auto px-6 md:px-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 relative order-2 md:order-1 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="absolute -inset-8 bg-forest-deep/5 rounded-full -z-10 animate-pulse"></div>
+<img alt="Colheita de café no Vale do Ribeira" class="relative rounded-[3rem] shadow-2xl w-full object-cover aspect-[0.8] z-10 hover:scale-[1.02] transition-transform duration-700" src="https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=800&auto=format&fit=crop">
+</div>
+<div class="md:col-span-7 md:pl-12 order-1 md:order-2 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<h2 class="text-headline-lg font-headline-lg text-forest-deep mb-8 leading-tight">Nosso Objetivo</h2>
+<h4 class="text-headline-md font-headline-md text-earth-clay mb-8 leading-relaxed max-w-2xl">
+                            Queremos mudar a realidade do Vale do Ribeira com a riqueza do café.
+                        </h4>
+<div class="space-y-6 text-body-lg text-on-surface-variant max-w-xl">
+<p class="">Junte-se a este movimento que vai transformar o Vale na nova fronteira do Café no Brasil.</p>
+<p class="">Você pode plantar café em sua propriedade que não estará sozinho. Já somos mais de 30 produtores e temos mais de 150 hectares plantados na região.</p>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="w-20 h-1 bg-sapling-green"></div>
+<span class="font-bold uppercase tracking-widest text-label-md font-label-md text-forest-deep">Compromisso com o Futuro</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- A Rede Cafeeira - Staggered/Masonry-like Grid -->
+<section class="py-section-gap bg-white overflow-hidden transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="container mx-auto px-6 md:px-section-gap">
+<div class="max-w-4xl mb-20">
+<h2 class="text-headline-lg font-headline-lg text-forest-deep mb-6">A Rede Cafeeira</h2>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+                        Estamos construindo a cadeia produtiva do café no Vale do Ribeira/SP, do preparo das mudas à comercialização final.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Staggered Card 1 -->
+<div class="bg-forest-deep text-on-primary p-10 rounded-3xl flex flex-col justify-between group hover:-translate-y-4 transition-all duration-500 shadow-xl shadow-forest-deep/10 md:mt-12 duration-1000 ease-out opacity-100 translate-y-0">
+<div>
+<span class="material-symbols-outlined text-5xl mb-8 text-sapling-green" data-icon="potted_plant">potted_plant</span>
+<h3 class="text-headline-md font-headline-md mb-6 leading-tight">Mudas com DNA para à região</h3>
+<p class="text-white/70 text-body-md">O viveiro Mudas Forte já tem mudas disponíveis adaptadas ao Vale do Ribeira/SP.</p>
+</div>
+<div class="h-1.5 w-16 bg-sapling-green mt-10"></div>
+</div>
+<!-- Staggered Card 2 -->
+<div class="bg-sapling-green text-on-primary p-10 rounded-3xl flex flex-col justify-between group hover:-translate-y-4 transition-all duration-500 shadow-xl shadow-sapling-green/20 duration-1000 ease-out opacity-100 translate-y-0">
+<div>
+<span class="material-symbols-outlined text-5xl mb-8 text-forest-deep" data-icon="agriculture">agriculture</span>
+<h3 class="text-headline-md font-headline-md mb-6 leading-tight">Preparo do solo e técnicas</h3>
+<p class="text-white/80 text-body-md">Domínio completo no preparo do solo e plantio especializado para produtividade máxima.</p>
+</div>
+<div class="h-1.5 w-16 bg-white/40 mt-10"></div>
+</div>
+<!-- Staggered Card 3 -->
+<div class="bg-surface-container-high p-10 rounded-3xl flex flex-col justify-between group hover:-translate-y-4 transition-all duration-500 md:mt-12 duration-1000 ease-out opacity-100 translate-y-0">
+<div>
+<span class="material-symbols-outlined text-5xl mb-8 text-earth-clay" data-icon="account_balance">account_balance</span>
+<h3 class="text-headline-md font-headline-md text-forest-deep mb-6 leading-tight">Insumos e financeiro</h3>
+<p class="text-on-surface-variant text-body-md">Novos parceiros, lojas de equipamentos e bancos fazem parte do movimento.</p>
+</div>
+<div class="h-1.5 w-16 bg-earth-clay mt-10"></div>
+</div>
+<!-- Staggered Card 4 -->
+<div class="bg-earth-clay text-on-primary p-10 rounded-3xl flex flex-col justify-between group hover:-translate-y-4 transition-all duration-500 shadow-xl shadow-earth-clay/10 duration-1000 ease-out opacity-100 translate-y-0">
+<div>
+<span class="material-symbols-outlined text-5xl mb-8 text-white/80" data-icon="groups">groups</span>
+<h3 class="text-headline-md font-headline-md mb-6 leading-tight">Suporte técnico</h3>
+<p class="text-white/70 text-body-md">Orientação e conhecimento técnico contínuo para o desenvolvimento regional.</p>
+</div>
+<div class="h-1.5 w-16 bg-sapling-green mt-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Numbers Section - Full Width Overlap -->
+<section class="py-24 md:py-32 bg-forest-deep text-on-primary relative overflow-hidden transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-sapling-green/15 rounded-full blur-[140px]"></div>
+<div class="absolute -bottom-52 -left-40 w-[500px] h-[500px] bg-sapling-green/10 rounded-full blur-[120px]"></div>
+<div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 28px 28px;"></div>
+<div class="container mx-auto px-6 md:px-12 max-w-[1280px] relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+<div class="lg:col-span-5">
+<span class="inline-flex items-center gap-2 text-sapling-green font-label-md tracking-[0.25em] uppercase bg-white/10 border border-white/10 px-5 py-2 rounded-full mb-6">Nosso impacto</span>
+<h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-[1.1]">Onde podemos<br>chegar?</h2>
+<p class="text-white/70 text-lg leading-relaxed mb-10 max-w-md">
+                            Temos estudos que nos impulsionam a dar o nosso melhor para alcançarmos números impressionantes. Participe desta aventura com a gente.
+                        </p>
+<div class="grid grid-cols-2 gap-6 max-w-md">
+<div class="flex gap-4 items-start">
+<div class="w-1.5 self-stretch bg-sapling-green rounded-full"></div>
+<div><div class="text-4xl font-extrabold text-sapling-green leading-none">+ 2.048</div><div class="text-xs font-bold uppercase tracking-widest text-white/60 mt-2">Plantadores de café</div></div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="w-1.5 self-stretch bg-sapling-green rounded-full"></div>
+<div><div class="text-4xl font-extrabold text-sapling-green leading-none">+ 20</div><div class="text-xs font-bold uppercase tracking-widest text-white/60 mt-2">Municípios</div></div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="group bg-white/[0.07] backdrop-blur-xl p-10 rounded-[2rem] border border-white/10 hover:bg-white/[0.12] hover:border-sapling-green/40 hover:-translate-y-2 transition-all duration-300 shadow-2xl">
+<div class="w-12 h-12 rounded-2xl bg-sapling-green text-forest-deep flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl">payments</span></div>
+<div class="text-5xl font-extrabold text-white tracking-tight">+ 50<span class="text-2xl font-bold text-white/70">MM</span></div>
+<div class="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mt-3">Receita esperada</div>
+<div class="h-1.5 bg-white/10 rounded-full mt-8 overflow-hidden"><div class="h-full w-3/4 bg-sapling-green rounded-full"></div></div>
+</div>
+<div class="group bg-white/[0.07] backdrop-blur-xl p-10 rounded-[2rem] border border-white/10 hover:bg-white/[0.12] hover:border-sapling-green/40 hover:-translate-y-2 transition-all duration-300 shadow-2xl sm:mt-10">
+<div class="w-12 h-12 rounded-2xl bg-white text-forest-deep flex items-center justify-center mb-8 group-hover:scale-110 transition-transform"><span class="material-symbols-outlined text-3xl">agriculture</span></div>
+<div class="text-5xl font-extrabold text-white tracking-tight">+ 10.000</div>
+<div class="text-xs font-bold uppercase tracking-[0.2em] text-white/60 mt-3">Hectares plantados</div>
+<div class="h-1.5 bg-white/10 rounded-full mt-8 overflow-hidden"><div class="h-full w-2/3 bg-white/70 rounded-full"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners Section - Overlapping with Previous -->
+<section class="py-24 md:py-28 bg-background transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="container mx-auto px-6 md:px-section-gap">
+<div class="mb-16 text-center max-w-2xl mx-auto">
+<span class="inline-flex items-center gap-2 text-earth-clay font-label-md tracking-[0.3em] uppercase bg-earth-clay/10 px-5 py-2 rounded-full mb-6">Nossos Parceiros</span>
+<h2 class="text-headline-lg font-headline-lg text-forest-deep mb-4">Quem fortalece o movimento</h2>
+<p class="text-body-lg text-on-surface-variant">Empresas e instituições que acreditam no Vale do Ribeira como a nova fronteira do café no Brasil.</p>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="group bg-white rounded-[1.75rem] p-8 border border-surface-variant shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-sapling-green/40 transition-all duration-300 flex flex-col items-center text-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-forest-deep text-white flex items-center justify-center shadow-lg shadow-forest-deep/20 group-hover:scale-110 group-hover:bg-sapling-green transition-all"><span class="material-symbols-outlined text-3xl">eco</span></div>
+<div class="font-extrabold text-forest-deep tracking-wide">PLANTE CAFÉ NO VALE</div>
+<div class="text-body-md text-on-surface-variant/70 text-sm">Movimento idealizador</div>
+</div>
+<div class="group bg-white rounded-[1.75rem] p-8 border border-surface-variant shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-sapling-green/40 transition-all duration-300 flex flex-col items-center text-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-sapling-green/15 text-forest-deep flex items-center justify-center group-hover:scale-110 group-hover:bg-sapling-green group-hover:text-white transition-all"><span class="material-symbols-outlined text-3xl">potted_plant</span></div>
+<div class="font-extrabold text-forest-deep tracking-wide italic">MUDA FORTE</div>
+<div class="text-body-md text-on-surface-variant/70 text-sm">Mudas adaptadas à região</div>
+</div>
+<div class="group bg-white rounded-[1.75rem] p-8 border border-surface-variant shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-sapling-green/40 transition-all duration-300 flex flex-col items-center text-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-earth-clay/15 text-earth-clay flex items-center justify-center group-hover:scale-110 group-hover:bg-earth-clay group-hover:text-white transition-all"><span class="material-symbols-outlined text-3xl">forest</span></div>
+<div class="font-extrabold text-forest-deep tracking-wide italic">FORTE FLORESTAL</div>
+<div class="text-body-md text-on-surface-variant/70 text-sm">Preparo e manejo do solo</div>
+</div>
+<div class="group bg-white rounded-[1.75rem] p-8 border border-surface-variant shadow-sm hover:shadow-xl hover:-translate-y-2 hover:border-sapling-green/40 transition-all duration-300 flex flex-col items-center text-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-forest-deep/10 text-forest-deep flex items-center justify-center group-hover:scale-110 group-hover:bg-forest-deep group-hover:text-white transition-all"><span class="material-symbols-outlined text-3xl">precision_manufacturing</span></div>
+<div class="font-extrabold text-forest-deep tracking-wide italic">VALE TEC</div>
+<div class="text-body-md text-on-surface-variant/70 text-sm">Tecnologia agrícola</div>
+</div>
+</div>
+<!-- Vozes do Vale - Staggered/Dynamic Layout -->
+<div class="mb-24">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<span class="text-earth-clay font-label-md tracking-[0.3em] uppercase block mb-4">Depoimentos</span>
+<h2 class="text-headline-lg font-headline-lg text-forest-deep">Vozes do Vale</h2>
+</div>
+<div class="hidden md:block w-32 h-32 bg-sapling-green/10 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<!-- Column 1 -->
+<div class="space-y-8 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-xl mb-6">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-white text-6xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
+</div>
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJP-M6BubaNLrWKo1pLgwFoQXtA0o2gJoNHLtVTCJAcbEC8G_jwAz2lY3vMgG3SK4xenMERSDWyQYCSlw-HZhtE_XX49XUd9GDcL0LMa0puDMbcvZ9o0kYog86_3ysOZyKC-TVPwxegnSoaCnWuAeXju2JaNaFp_gKbj00ImJGkczw5GtVM0lu4MnlnJovN6gB7yam2uNzQx5MgJdWIQBsRsp_5C3PlCBYnxmP_UkqmNkWtRkRixUOvQ" alt="Produtor João Silva" class="w-full h-full object-cover rounded-2xl">
+</div>
+<h4 class="text-headline-md font-bold text-forest-deep mb-2">Produtor João Silva</h4>
+<p class="text-body-md text-on-surface-variant">"O café transformou minha propriedade e a vida da minha família de forma irreversível."</p>
+</div>
+</div>
+<!-- Column 2 - Staggered -->
+<div class="space-y-8 md:mt-24 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-xl mb-6">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-white text-6xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
+</div>
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVWu3snQaRlWWdPllgNZ533GP7IZuQ5YzyEL9b9SzUPIfIkpco7E25cgYcJ0-YTP29xm6XmvmblExFDO4EmTG6-YAb88bxQEL6QZFWL75kZ9XUZrtuK6DohHDn2bB3Qzh2H4EGZ5uWUtJsNRQL1dM04zVGbh6Pvl1LyioBGCdKK_c34mLeG2feaot5f_x1ipbFvjY8fqDJkYd9flbiSo6xubicApSCR8iZxVASF4zcqORw5pcsKwPScQ" alt="Eng. Maria Santos" class="w-full h-full object-cover rounded-2xl">
+</div>
+<h4 class="text-headline-md font-bold text-forest-deep mb-2">Eng. Maria Santos</h4>
+<p class="text-body-md text-on-surface-variant">"A qualidade técnica do Vale do Ribeira é surpreendente e superior a muitas outras regiões."</p>
+</div>
+</div>
+<!-- Column 3 - Staggered Different -->
+<div class="space-y-8 md:mt-12 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-xl mb-6">
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-white text-6xl opacity-80 group-hover:scale-110 transition-transform">play_circle</span>
+</div>
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" alt="Parceiro Comercial" class="w-full h-full object-cover rounded-2xl">
+</div>
+<h4 class="text-headline-md font-bold text-forest-deep mb-2">Parceiro Comercial</h4>
+<p class="text-body-md text-on-surface-variant">"Estamos abrindo novos mercados internacionais para o café sustentável produzido no Vale."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Final - Floating/Overlap Card -->
+<div class="relative mt-40">
+<div class="absolute -top-24 -left-12 w-64 h-64 bg-sapling-green/20 rounded-full blur-[100px] -z-10"></div>
+<div class="bg-forest-deep rounded-[3rem] overflow-hidden p-12 md:p-24 text-center relative shadow-3xl">
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+<span class="text-sapling-green font-label-md uppercase tracking-[0.4em] mb-8 block font-bold">Não fique de fora!</span>
+<h2 class="text-display-lg font-display-lg text-white max-w-4xl mx-auto mb-12 leading-tight">
+                            Junte-se a nós e mude a realidade da região do Vale hoje mesmo!
+                        </h2>
+<a class="inline-block bg-white text-forest-deep px-16 py-6 rounded-full font-headline-md text-headline-md hover:bg-sapling-green hover:text-white hover:-translate-y-2 transition-all duration-300 shadow-2xl" href="https://wa.me/551320150215">
+                            PLANTE CAFÉ AGORA!
+                        </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container pt-section-gap pb-12 border-t border-surface-variant">
+<div class="container mx-auto px-6 md:px-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="col-span-1 transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<div class="flex items-center gap-2 mb-8">
+<img alt="Logo" class="h-10 w-10" src="https://lh3.googleusercontent.com/aida/AP1WRLtS1PESF4JFJjgEZa2JQyVZKjS7mtYmToBSftaHP30ed0d5GeltRhdEIZQmHv374KwZ65lV_KyqkqjRI0js480YQ0z3lc6QyFlQt_LGYhxDWvN1DS6nSrNsF5CiHwop11Ye8iBbJwsqUnx4VLPeRgXTHAbUSWlKeeDuThE-wYItUWJiz6Lt5MEZfMRCBZWLeRP424lAQJ9mBps3eAfKVZn_UD8tgAeo3kRDA6T_-UO8m-LyQd45pLPcuT_F">
+<span class="text-headline-md font-headline-md font-extrabold text-forest-deep">Plante Café</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-10 max-w-xs">
+                        Fomentando o agronegócio sustentável e a prosperidade econômica no Vale do Ribeira através da cultura do café de excelência.
+                    </p>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-forest-deep text-white flex items-center justify-center hover:bg-sapling-green transition-colors shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-forest-deep text-white flex items-center justify-center hover:bg-sapling-green transition-colors shadow-lg" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+</div>
+</div>
+<div class="transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<h4 class="text-label-md font-label-md uppercase tracking-widest text-forest-deep mb-10 border-b-2 border-sapling-green w-fit pb-1">Navegação</h4>
+<ul class="space-y-5">
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-earth-clay transition-colors" href="#">Home</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-earth-clay transition-colors" href="#">Sobre Nós</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-earth-clay transition-colors" href="#">Nossa Atuação</a></li>
+<li class=""><a class="text-body-md text-on-surface-variant hover:text-earth-clay transition-colors" href="#">Política de Privacidade</a></li>
+</ul>
+</div>
+<div class="transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<h4 class="text-label-md font-label-md uppercase tracking-widest text-forest-deep mb-10 border-b-2 border-sapling-green w-fit pb-1">Newsletter</h4>
+<form class="space-y-4">
+<input class="w-full bg-white border-2 border-surface-variant focus:border-forest-deep focus:ring-0 px-6 py-4 text-body-md transition-all rounded-2xl" placeholder="Seu melhor e-mail" type="email">
+<button class="w-full bg-earth-clay text-white py-4 rounded-2xl font-bold hover:bg-forest-deep transition-all shadow-lg" type="submit">INSCREVER</button>
+</form>
+</div>
+<div class="transition-all duration-1000 ease-out opacity-100 translate-y-0">
+<h4 class="text-label-md font-label-md uppercase tracking-widest text-forest-deep mb-10 border-b-2 border-sapling-green w-fit pb-1">Contato</h4>
+<div class="space-y-6 text-on-surface-variant text-body-md">
+<p class="flex items-start gap-4">
+<span class="material-symbols-outlined text-forest-deep mt-1" data-icon="location_on">location_on</span>
+                            Jacupiranga, Vale do Ribeira/SP
+                        </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-forest-deep" data-icon="call">call</span>
+                            +55 (13) 2015-0215
+                        </p>
+<p class="flex items-center gap-4">
+<span class="material-symbols-outlined text-forest-deep" data-icon="mail">mail</span>
+                            contato@plantecafenovale.com.br
+                        </p>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6 text-label-md font-label-md text-on-surface-variant/60">
+<p class="">© 2024 Plante Café no Vale - Movimento de Transformação do Vale do Ribeira</p>
+<div class="flex gap-10">
+<a class="hover:text-forest-deep transition-colors" href="#">Privacidade</a>
+<a class="hover:text-forest-deep transition-colors" href="#">Termos de Uso</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button (FAB) -->
+<a class="fixed bottom-10 right-10 z-[60] bg-sapling-green text-white w-20 h-20 rounded-full shadow-3xl shadow-sapling-green/40 hover:scale-110 active:scale-95 transition-all flex items-center justify-center group" href="https://wa.me/551320150215">
+<span class="material-symbols-outlined text-4xl" data-icon="chat">chat</span>
+<span class="absolute right-full mr-6 bg-white text-forest-deep px-6 py-3 rounded-2xl text-label-md font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0 shadow-2xl">Fale com um Especialista</span>
+</a>
+<script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-20');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .grid > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-20');
+            observer.observe(el);
+        });
+    </script>
+
+
+</body></html>
